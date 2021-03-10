@@ -5,7 +5,7 @@ export function RepositoryItem(props) {
       {/*Caso o repository esteja vazio o nome fica Default*/}
       <p>{props.repository.description}</p>
 
-      <a href={props.repository.link}>Acessar repositório</a>
+      <a href={props.repository.html_url}>Acessar repositório</a>
     </li>
   )
 }
