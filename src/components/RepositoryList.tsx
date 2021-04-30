@@ -11,8 +11,14 @@ import "../styles/repositories.scss";
   link: "https://github.com/unform/unform",
 }; (deletado)*/
 
+interface Repository {
+  name: string;
+  description: string;
+  html_url: string;
+}
+
 export function RepositoryList() {
-  const [repositories, setRepositores] = useState([]);
+  const [repositories, setRepositores] = useState<Repository[]>([]);
 
   useEffect(() => {
     fetch('https://api.github.com/orgs/rocketseat/repos')
